@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/normalize.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/grid.css')}}>
+        <link rel='stylesheet' href={{url_for('static' , filename = 'css/style.css')}}>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico')}}" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png')}}">
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+            <!-- Site CSS -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+            <!-- Responsive CSS -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
+            <!-- Custom CSS -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css')}}">
+            <script src="{{ url_for('static', filename='js/modernizr.js')}}"></script> <!-- Modernizr -->
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <title>Web Deployment</title>
+        <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+		
+		<!--<style>
+			.content {
+			  max-width: 500px;
+			  margin: auto;
+			  }
+			.bg-img{
+				width: 100%;
+				height: 100vh;
+				background-image:linear-gradient(rgba(0, 0, 0, 0.71),rgba(0, 0, 0, 0.7)),url('static/css/front.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			
+		</style>
+
+
+    </head>
+	
+    <body id="page-top" class="politics_version">
+    <!-- LOADER -->
+    <!--<div id="preloader">
+		<div id="main-ld">
+			<div class="loader">
+				<span class="loader-inner">CleanPhotography</span>
+			</div>
+		</div>
+    </div>--><!-- end loader -->
+    <!-- END LOADER -->
+	
+	
+	<div class="fat-nav">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <li><a class="js-scroll-trigger" href="#home">Home</a></li>
+                <li><a class="js-scroll-trigger" href="#about">About Me</a></li>
+                <li><a class="js-scroll-trigger" href="#gallery">Gallery</a></li>
+                <li><a class="js-scroll-trigger" href="#services">Service</a></li>
+				<li><a class="js-scroll-trigger" href="#reviews">Reviews</a></li>
+				<li><a class="js-scroll-trigger" href="#pricing">Pricing</a></li>
+				<li><a class="js-scroll-trigger" href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container-fluid">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" src="{{ url_for('static', filename='css/the boys.png')}}" alt="" />
+		</a>
+      </div>
+    </nav>
+
+    <section id="home" class="main-banner parallaxie" style="background: url('static/images/stateskop.jpg')">
+		<div class="heading">
+			<h1>Klasifikasi Gambar Kanker Usus Besar dan Paru Menggunakan Pre-trained Model</h1>
+            <p>Nama : Brilly Lutfan Qasthari 
+            <br>Nim : 181051025<br>
+                Jurusan : Informatika<br>
+                Fakultas : Teknologi Informasi dan Bisnis<br>
+                Kosentrasi : Soft Compuiting</p>
+			<h3 class="cd-headline clip is-full-width">
+				<span>Label Yang Tersedia :  </span>
+				<span class="cd-words-wrapper">
+					<b class="is-visible">Adenokarsinoma Usus Besar</b>
+					<b>Jaringan Jinak Usus Besar</b>
+					<b>Adenokarsinoma Paru-Paru</b>
+					<b>Jaringan Jinak Paru-Paru</b>
+					<b>Karsinoma Sel Skuamosa Paru-Paru</b>
+				</span>
+			</h3>
+		</div>
+	</section>
+
+      
+	<div class="bg-img">
+	<div class="content">
+        <div class = "index-main">
+
+        <div style = "width : 100%; padding-top : 5%;">
+            <div class = "header-content">
+                 <h1 style = "text-align: center;color: white"><span class="header-content-text">Klasifikasi Gambar Harus Sesuai Dengan Label</span></h1>
+                 
+            </div>
+        </div>
+
+        
+        <div class="upload-section">
+
+            <div class="upload-file">
+                <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="file-form-input" type="file" , name = "file"/>
+                    <button class="btn btn-success btn-lg">Upload</button> 
+                </form>
+            </div>
+
+            <div class="uploadOR"> 
+                <span>OR</span>
+            </div>
+
+            <div class="upload-link">
+                <form class = "link-form" action="/success" method="post", enctype="multipart/form-data">
+                    <input class="link-form-input" type="text" ,maxlength="1000" , name = "link" placeholder="Paste the image URL(not the site address)"/>
+                    <button class="btn btn-success btn-lg">Proceed</button> 
+                </form>
+            </div>
+            <div class = "header-content-sub">
+                    <p style = "text-align: center; margin-top: 15px;color: red" class="header-content-info">{{error}}</p>
+            </div>
+        </div>
+
+	     </div>  
+	</div>			 
+	</div>
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    &copy; Copyright <strong><span>Brilly Lutfan Q</span></strong>. All Rights Reserved
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <!-- ALL JS FILES -->
+    <script src="{{ url_for('static', filename='js/all.js')}}"></script>
+	<!-- Camera Slider -->
+	<script src="{{ url_for('static', filename='js/jquery.mobile.customized.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js')}}"></script> 
+	<script src="{{ url_for('static', filename='js/parallaxie.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/headline.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.appear.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/skill.bars.jquery.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/responsiveslides.min.js')}}"></script>
+	<!-- Contact form JavaScript -->
+    <script src="{{ url_for('static', filename='js/jqBootstrapValidation.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/contact_me.js')}}"></script>
+    <!-- ALL PLUGINS -->
+	<script src="{{ url_for('static', filename='js/jquery.fatNav.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/main.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+    </body>
+</html>
